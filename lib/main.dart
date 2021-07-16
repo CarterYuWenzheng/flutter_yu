@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Page1.dart';
+import 'Page2.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,6 +23,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: <String,WidgetBuilder>{
+        "page1" : (context) => Page1(),
+        "page2" : (context) => Page2(),
+      },
     );
   }
 }
